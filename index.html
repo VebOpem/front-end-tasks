@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms n stuff</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form class="contact_form" name="my-form" action="" method="post">
+        <ul>
+            <li>
+                <h2>Contact form</h2>
+                <span class="required_notification">* Dentotes required field.</span>
+            </li>
+            <li>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Ola Nordman" title="At least first name and last name, no initials." pattern="(\w{2,})( \w{2,})+" required>
+            </li>
+            <li>
+                <label for="email">e-mail</label>
+                <input type="email" name="email" id="email" placeholder="random@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <span class="form_hint">Propper format: "name@something.com"</span>
+            </li>
+            <li>
+                <label for="website">Website</label>
+                <input type="url" name="website" id="website" placeholder="http://www.ntnu.no" pattern="(https?://.+)([a-zA-Z0-9](a-zA-ZæøåÆØÅ0-9\-]{0,61}[a-zA-Z0-9]?\.)+[a-zA-Z]{2,6}$" required >
+                <span class="form_hint">Propper format: https://www.tntnu.no</span>
+            </li>
+            <li>
+                <label for="bdate">Birthdate</label>
+                <input type="date" name="bdate" id="bdate" required>
+            </li>
+            <li>
+                <label for="message">Message</label>
+                <textarea minlength="20" maxlength="1024" title="Type between 20 and 1024 characters" name="message" id="message" col="20" row="6" required></textarea>
+            </li>
+            <li>
+                <button class="reset" type="reset">Reset</button> 
+                <button class="submit" type="submit" >Submit form</button>
+            </li>
+        </ul>
+    </form>
+    <p>Vebjørn Opem made this</p>
+    <p>btw thanks for supplying the CSS ;)</p>
+</body>
+</html>
