@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/byj5jte.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Front-end Oblig 1</title>
+    </head>
+    <body>
+        <h1>Front-end: Oblig 1</h1>
+        <h3>1</h3>
+        <div class="awnser">
+            <p class="question">
+                Q: How will you assign a div with the class ‘test’ in a variable called ‘demo’?
+            </p>
+            <p class="answer">
+                A: 
+            </p>
+            <!-- This div is hidden to only display in console -->
+            <div class="test">
+                <p>Item in div</p>
+            </div>
+            <script src="scripts/script-1.js"></script>
+            <code>
+                <span class="bold">.html</span><span>
+                &lt;div&gt; class="test"><span>
+                    &lt;p&gt;Item in div&lt;/p&gt;<br>
+                &lt;/div&gt;
+            </code>
+            <code>
+                <span class="bold">.js</span><span>
+                let demo = document.getElementsByClassName('test');
+                console.log(demo)
+            </code>
+        </div>
+        <h3>2</h3>
+        <div class="awnser">
+            <p>
+                Q: 	How will you assign a div with the id=’denne’ to a variable called ‘unik’?
+            </p>
+            <p>
+                A: 
+            </p>
+            <div id="denne">
+                <p>Item in div</p>
+            </div>
+            <script src="./scripts/script-2.js"></script>
+            <code>
+                <span class="bold">.html</span><span>
+                    &lt;div&gt; id="denne"><span>
+                        &lt;p&gt;Item in div&lt;/p&gt;<br>
+                    &lt;/div&gt;
+            </code>
+            <code>
+                <span class="bold">.js</span>
+                    let demo = document.getElementsByClassName('test');
+                    console.log(demo)
+            </code>
+        </div>
+        <h3>3</h3>
+        <div class="awnser">
+            <p>
+                Q:	How will you find the link in the NTNU logo top left at this page (https://www.ntnu.no)? (NB. The link, not the actual picture).
+            </p>
+            <p>
+                A: For just the link you would write
+            </p>
+            <code>
+                <span class="bold">.js</span>
+                document.getElementById("home_href").href;
+            </code>
+            <p>
+                This means that you get the element with the id "home_href" and then with the atribute ".href". Then you have just the link and not the picture.
+            </p>
+        </div>
+        <h3>4</h3>
+        <div class="awnser">
+            <p>
+                Q: What should you write in the “Console” to make the input field for the search bar top right at this page (https://www.ntnu.no) say “studier”?
+
+            </p>
+            <p>
+                A: 
+            </p>
+            <code>
+                document.getElementById("ntnu-search").value="Studier";
+            </code>
+        </div>
+        <h3>5</h3>
+        <div class="awnser">
+            <p>
+                Q: What do you need to write in the “console” to simulate a click event at the “Student i Gjøvik” button in the “Studentliv” menu? https://www.ntnu.no
+            </p>
+            <p>
+                A:
+            </p>
+            <code>
+
+            </code>
+        </div>
+    </body>
+</html>
