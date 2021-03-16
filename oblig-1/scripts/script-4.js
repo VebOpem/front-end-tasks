@@ -1,0 +1,1 @@
+document.getElementById("ntnu-search").value = "Studier";
