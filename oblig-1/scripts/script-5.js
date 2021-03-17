@@ -1,9 +1,3 @@
+//<a aria-labelledby="gmenuitem_1_2_Student_i_Gjøvik" class="dropdown-item" href="/studentliv/gjovik" role="menuitem" tabindex="-1" id="yui_patched_v3_18_1_1_1615901561786_154">Student i Gjøvik</a>
 
-//Lar meg klikke men kommer på neste side, ikke dropdown meny 
-let dropMenu = document.querySelector("a[href='/studentliv']")
-dropMenu.dispatchEvent(new MouseEvent('click'));
-
-//    < a href = "https://www.ntnu.no/studentliv/gjovik" > Student i Gjøvik</a>
-let studGjovik = document.querySelector("a[href='https://www.ntnu.no/studentliv/gjovik']")
-studGjovik.dispatchEvent(new MouseEvent('click'));
-
+document.querySelector('a[aria-labelledby="gmenuitem_1_2_Student_i_Gjøvik"]').click();
