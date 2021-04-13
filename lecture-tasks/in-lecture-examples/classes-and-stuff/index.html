@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+    <script src="js/withClasses.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Contact form</h1>
+    <form onsubmit="javascript :return false">
+        <input type="hidden" name="idx">
+        <label for="firstName"></label>First name<input type="text" id="firstName" name="firstName"><br>
+        <label for="lastName">Last name</label><input type="text" id="lastName" name="lastName"><br>
+        <label for="tlf">Tlf</label><input type="text" id="tlf" name="tlf"><br>
+        <label for="email">E-mail</label><input type="text" id="email" name="email">
+        <button>ADD CONTACT</button>
+    </form>
+    <ul class="contacts">
+
+    </ul>
+    <script src="js/classes/contact.js"></script>
+    <script src="js/contactRegister.js"></script>
+</body>
+
+</html>
