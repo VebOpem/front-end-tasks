@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oblig 2: Form validation</title>
+    </head>
+    <body>
+        <form name = “myForm” method="post" action="" onsubmit="return validateForm()">
+            <input type = "text" id = "fName" name ="FirstName" placeholder="First Name"> <br>
+            <input type = "text" id = "LName" name = "LastName" placeholder="Last Name"><br>
+            <input type = "text" id = "age" value = "EnterAge" placeholder="Age"><br>
+            <input type = "text" id = "num" name = "Mobile" placeholder="Phone Number"><br>
+            <input type = "submit">
+        </form>
+        <script type="text/javascript">
+            function validateForm() {
+                var fn = document.form['myForm'] ['FirstName'].value;
+                if (fn == null || fn == "") {
+                    alert("First Name field can not be empty");
+                    document.getElementById('fn').focus();
+                    return false;
+                }
+                var ln = document.form['myForm'] ['LastName'].value;
+                if (ln == null || ln == "") {
+                    alert("Last Name field can not be empty");
+                    document.getElementById('fn').focus();
+                    return false;
+                }
+                var a = document.form['myForm'] ['EnterAge'].value;
+                if (a == null || a == "") {
+                    alert("Age field can not be empty");
+                    document.getElementById('age').focus();
+                    return false;
+                }
+                else if (parseInt (a) < 13 || parseInt (a) > 85 ) {
+                    alert("Age must be between 13 and 85");
+                    document.getElementById('age').focus();
+                    return false;
+                }
+                var numb = document.form['myForm']['Mobile'].value;
+                if (numb.length != 7) {
+                    alert("phone number must be 7 characters. ");
+                    document.getElementById('num').focus();
+                    return false;
+                }
+        } 
+        </script>
+    </body>
+</html>

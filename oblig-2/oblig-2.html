@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblig 2</title>
+</head>
+<body>
+    <h1 id="output">Title</h1>
+    <input type = "text" id = "age" placeholder="Your Age">
+    <input onclick="display()" type="button" name="ageButton" value="Your Age">
+    <input onclick="divMuliAge()" type="button" name="ageButton" value="Divide or multiply, who knows :P">
+    <br><br>
+
+   
+   <script type="text/javascript">
+        
+        function display() {
+            var ageNumb = parseInt(document.getElementById('age').value);
+            console.log(ageNumb);
+            document.getElementById('output').innerHTML= ageNumb;
+        }
+        var x = 3
+        var y = 2
+        function divMuliAge() {
+            var ageNumb = parseInt(document.getElementById('age').value)
+            if (ageNumb < 25) {
+                result = ageNumb * x;
+
+            } else {
+                result = ageNumb / y
+            }
+            console.log(result)
+            document.getElementById('output').innerHTML = result;
+        }
+        var i = 10
+        for (var i = 0; i < 3; i++) {
+            if(i==2){
+                 let i=5;
+            }
+        }
+        alert(i);
+        console.log(i)
+        /* i = 3. 
+        That happens because it is a for loop that says "if i less than 3, add the value of i by 1. 
+        Once the value of i becomes 2, the "let" comes in to effect and it says i to become 5, 
+        however by using let, this change is not remembered outside of the curly brackets of let. 
+        So the i is still valued as 2. 
+        The fist statement is also irrelevant because the first initialization in the for loop 
+        sets var of i to be 0.*/
+        
+
+    </script>
+</body>
+</html>
