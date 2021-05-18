@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Oblig 2: Task 5 calculator
+	</title>
+</head>
+<body>
+
+<h1> My First Calculator </h1>
+
+
+<p> Please enter two integer value</p>
+
+<label>Number 1</label>
+<input type="text" name="number1" id="n1">
+<label>Number 2</label>
+<input type="text" name="number2" id="n2">
+<br><br>
+
+<input onclick="add()" type="button" name="add" value="Add">
+<input onclick="sub()" type="button" name="sub" value="Sub">
+<input onclick="mul()" type="button" name="mul" value="Mul">
+<input onclick="div()" type="button" name="div" value="Div">
+<input onclick="pow()" type="button" name="pow" value="Pow">
+
+<br><br><br>
+<label>Result</label>
+<input type="text" name="txt" id="display" value="results">
+
+<script type="text/javascript">
+//call the function "changeType" when the page loads
+window.onload = changeType;
+/* This function changes the type of input field from text to number. 
+I do this to prevent the user to write letters or characters in the input fields. 
+One can also fill inn the field by clicking the arrows. 
+This also makes it so the NaN-value must be null, 
+so if the result is NaN i know that a field is not filled inn */
+function changeType (){
+    document.getElementById('n1').type = 'number';
+    document.getElementById('n2').type = 'number';
+}
+/* This is the number validation function. 
+It fist checks if both fields are empty, then field one, 
+and then field two, by the use of if/else if statements.
+I also added a console.log() in the last statement to show the calculation history */
+function validateNumbers () {
+
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	if (isNaN(num1) && isNaN(num2)){
+		alert("Both fields must have a number to calculate.")
+	} else if (isNaN(num1)) {
+		alert("Number 1 needs to have a number to calculate.")
+	} else if(isNaN(num2)){
+		alert("Number 2 needs to have a number to calculate.")
+	} else {
+		console.log(`Successful calculation! result = ${result}`)
+	}
+};
+
+function add() {
+
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 + num2;
+	validateNumbers();
+	document.getElementById('display').value = result;
+}
+
+function sub() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 - num2;
+	validateNumbers ();
+	document.getElementById('display').value = result;
+}
+
+function mul() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 * num2;
+	validateNumbers ();
+	document.getElementById('display').value = result;
+}
+
+function div() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 / num2;
+	validateNumbers ();
+	document.getElementById('display').value = result;
+}
+//math.pow() makes the second number the power of the first number.
+function pow() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = Math.pow(num1, num2);
+	validateNumbers ();
+	document.getElementById('display').value = result;
+}
+
+</script>
+
+
+	
+</body>
+</html>
+

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form validation</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Oblig 2: Form Validation</h1>
+    <h1>Form Validation</h1>
     
+
     <form name="myForm" method="post" action="#" onsubmit="return validateForm()">
         
         <p>First name</p>
@@ -19,23 +20,21 @@
         <p>Age</p>
         <input type="text" name="ageField" id="age" value="">
         
-        <p>Phone Number</p>
+        <p>Number</p>
         <input type="text" name="number" id="num" value="">
         <input type="submit" name="sub" value="submit">
     </form>
     <script type="text/javascript">
-    /*This is my validate form function.
-    Fist, for each of the fields, it makes a variable with the value of the input.
-    It then checks if all fields are filled in i.e if the value of any of the fields are null. 
-    You get a corresponding message to fill if said fields and it returns false to not submit the form. 
-    Ages are also checked to be between the range of 13 and 85.
-    Lastly it checks if the phone number does not equal to 7 characters in length
-    and if the result is not a number*/
         function validateForm() {
             var x = document.forms['myForm'] ['fName'].value;
             if (x == null || x == "") {
                 alert("First name must be filled in");
                 document.getElementById('fn').focus();
+                return false;
+            }
+            else if (x.length <3 || x.length >20) {
+                alert("Name must be more than 3, and less than 20 characters. ");
+                document.getElementById('ln').focus();
                 return false;
             }
             var y = document.forms['myForm'] ['lName'].value;
@@ -50,21 +49,17 @@
                 document.getElementById('age').focus();
                 return false;
             }
-            else if (parseInt (a) < 13 || parseInt (a) > 85 ) {
-                alert("Age must be between 13 and 85");
+            else if (parseInt (a) < 12 || parseInt (a) > 110 ) {
+                alert("Age must be between 12 and 110");
                 document.getElementById('age').focus();
                 return false;
             }
             var n = document.forms['myForm'] ['number'].value;
             if (n.length != 7) {
-                alert("Your phone number must be 7 digits.");
+                alert("your number must be 7 digits.");
                 document.getElementById('n').focus();
                 return false;
-            } else if (isNaN(n)) {
-                alert("Your phone number can only contain numbers.");
-                document.getElementById('n').focus();
-                return false;
-            }
+            };
         };
     </script>
 </body>
