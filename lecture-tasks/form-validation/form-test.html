@@ -48,6 +48,19 @@
                 document.getElementById('age').focus();
                 return false;
             }
+            var em = document.forms['login'] ['emailField'].value;
+
+            var atpos=em.indexOf("@");
+            alert(em);
+            var dotpos=em.lastIndexOf(".");
+
+            if (atpos<1 || dotpos<atpos+2 || dotpos+2>=em.length)
+                    {
+                    alert("Not a valid e-mail address");
+                  document.getElementById('email').focus();
+                  return false;
+
+            }
         }
     </script>
 </body>

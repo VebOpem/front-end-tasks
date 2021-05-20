@@ -15,12 +15,13 @@
 
    
    <script type="text/javascript">
-        
+    // Task 1
         function display() {
             var ageNumb = parseInt(document.getElementById('age').value);
             console.log(ageNumb);
             document.getElementById('output').innerHTML= ageNumb;
         }
+    // Task 2
         var x = 3
         var y = 2
         function divMuliAge() {
@@ -34,18 +35,19 @@
             console.log(result)
             document.getElementById('output').innerHTML = result;
         }
+    // task 3
         var i = 10
         for (var i = 0; i < 3; i++) {
             if(i==2){
                  let i=5;
             }
         }
-        alert(i);
+        //alert(i);
         console.log(i)
         /* i = 3. 
         That happens because it is a for loop that says "if i less than 3, add the value of i by 1. 
         Once the value of i becomes 2, the "let" comes in to effect and it says i to become 5, 
-        however by using let, this change is not remembered outside of the curly brackets of let. 
+        however by using let, this change is not remembered outside of the curly brackets in the if statement. 
         So the i is still valued as 2. 
         The fist statement is also irrelevant because the first initialization in the for loop 
         sets var of i to be 0.*/
