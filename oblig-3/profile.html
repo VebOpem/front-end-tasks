@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js-files/profile.js" charset="utf-8"></script>
+	<script src="js-files/register.js" charset="utf-8"></script>
+	<title>Oblig: 3</title>
+</head>
+<body>
+
+<h1> Profile </h1>
+
+
+<form name="Login" method="post" action="#" onsubmit="return validateForm()">
+	<input type="hidden" name="idx" value="">
+	
+	<label for="name">Name</label>
+	<input type="text" name="name" id="FN"> <br>
+
+	<label for="age">age</label>
+	<input type="text" name="ageField" id="age"> <br>
+	
+	<label for="email">E-mail</label>
+	<input type="text" name="email" id="e"><br>
+
+	<label for="number"> Phone Number</label>
+	<input type="text " name="number" id="num">
+
+	<!--<button type="update">Update</button>-->
+	<input type="submit" name="Update" value="update" id="button">
+</form>
+<ul class="users"></ul>
+
+
+<script type="text/javascript">
+	
+
+	function validateForm() {
+		var x = document.forms['Login']['name'].value;
+		if(x == null || x == "")
+		{
+			alert("Please enter your name");
+			document.getElementById('FN').focus();
+			return false;
+		} else if (x.length <3) {
+			alert("Your name cannot be shorter than 3 characters");
+			document.getElementById('FN').focus();
+			return false;
+		}
+
+		var a = document.forms['Login']['ageField'].value;
+		if(a == null || a == "")
+		{
+			alert("age can not be empty");
+			document.getElementById('age').focus();
+			return false;
+		}
+		else if(parseInt(a) < 12 || parseInt(a) > 95)
+		{
+			alert("age should be between 12 and 95");
+			document.getElementById('age').focus();
+			return false;
+		}
+
+
+//https://www.udemy.com/blog/javascript-validation-2/?utm_source=adwords&utm_medium=udemyads&utm_campaign=DSA_Catchall_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_88010211481_._ad_398022934994_._kw__._de_c_._dm__._pl__._ti_dsa-406594358574_._li_1010781_._pd__._&matchtype=b&gclid=EAIaIQobChMI5p7VzI7V6AIVDImyCh31oAylEAAYASAAEgK9IfD_BwE
+		
+		var em = document.forms['Login']['email'].value; 
+		var atpos=em.indexOf("@");
+		// Create a variable to return the numerical value of .
+		// within the variable
+		var dotpos=em.lastIndexOf(".");
+		// Compare the numerical values
+		if (em == null || em == "") {
+			alert("email can not be empty");
+			document.getElementById('e').focus();
+			return false;
+		}else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=em.length) {
+		    alert("Not a valid e-mail address");
+			document.getElementById('e').focus();
+		    return false;
+		}
+		var n = document.forms['Login'] ['number'].value;
+        if (n.length != 7) {
+            alert("Your phone number must be 7 digits.");
+            document.getElementById('n').focus();
+            return false;
+        } else if (isNaN(n)) {
+            alert("Your phone number can only contain numbers.");
+            document.getElementById('n').focus();
+            return false;
+		}
+
+	}
+	let aPerson = new Update("Ola", 50, "ola@gmail.com", 1234567)
+</script>
+
+
+
+</body>
+</html>
